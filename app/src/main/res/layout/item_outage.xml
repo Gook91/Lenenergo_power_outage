@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/small_padding"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dates"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="C 09:00 по 18:00 21.11.2024" />
+
+        <CheckBox
+            android:id="@+id/expand_button"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="@dimen/icon_button_size"
+            android:layout_height="@dimen/icon_button_size"
+            android:button="@drawable/selector_expand"
+            android:checked="false" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/addresses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_padding"
+        android:ellipsize="end"
+        android:maxLines="2"
+        tools:maxLines="100"
+        tools:text="д Сяськелево(частично),ферма с/х ПЛАМЯ\nд Тойворово
+        \nд Акколово\nд Муттолово\nд Туганицы, ферма с/х ПЛАМЯ" />
+
+    <TextView
+        android:id="@+id/commentary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_padding"
+        android:textStyle="italic"
+        android:visibility="gone"
+        tools:text="Работы на ПС-ПМ."
+        tools:visibility="visible" />
+
+</LinearLayout>

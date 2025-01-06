@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Lenenergo power outage</string>
+
+    <!--    Outage item    -->
+    <string name="expand_more">Показать больше</string>
+    <string name="expand_less">Показать меньше</string>
+    <string name="address_separator">, </string>
+    <string name="date_outage_template">С %1$s по %2$s</string>
 </resources>
