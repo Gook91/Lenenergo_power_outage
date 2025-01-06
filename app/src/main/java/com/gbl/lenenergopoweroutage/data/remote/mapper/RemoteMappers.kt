@@ -13,24 +13,21 @@ object RemoteMappers : JsoupDocumentMapper {
 
             val iterator = row.getElementsByTag(ROW_HTML_TAG).iterator()
 
-            val region = iterator.next().text()
-            val district = iterator.next().text()
+            iterator.next() // region
+            iterator.next() // district
             val addresses = iterator.next().text()
             val startDate = iterator.next().text()
             val startTime = iterator.next().text()
             val endDate = iterator.next().text()
             val endTime = iterator.next().text()
             iterator.next() // filial
-            val res = iterator.next().text()
+            iterator.next() // res
             val commentary = iterator.next().text()
 
             Outage(
-                region = region,
-                district = district,
                 addresses = addresses,
                 startDate = dateTimeStringToLong(startDate, startTime),
                 endDate = dateTimeStringToLong(endDate, endTime),
-                res = res,
                 commentary = commentary
             )
         }

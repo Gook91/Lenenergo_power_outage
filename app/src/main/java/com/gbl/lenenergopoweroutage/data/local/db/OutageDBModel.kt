@@ -9,31 +9,22 @@ import com.gbl.lenenergopoweroutage.domain.model.Outage
 data class OutageDBModel(
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
-    val region: String,
-    val district: String,
     val addresses: String,
     val startDate: Long,
     val endDate: Long,
-    val res: String,
     val commentary: String,
 ) {
     constructor(outage: Outage) : this(
-        region = outage.region,
-        district = outage.district,
         addresses = outage.addresses,
         startDate = outage.startDate,
         endDate = outage.endDate,
-        res = outage.res,
         commentary = outage.commentary,
     )
 
     fun toOutage(): Outage = Outage(
-        region = region,
-        district = district,
         addresses = addresses,
         startDate = startDate,
         endDate = endDate,
-        res = res,
         commentary = commentary
     )
 
