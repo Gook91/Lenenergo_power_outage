@@ -6,12 +6,14 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 @Database(
-    entities = [OutageDBModel::class],
+    entities = [OutageDBModel::class, AddressFilterDBModel::class],
     version = 1,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun outageDao(): OutageDao
+
+    abstract fun addressFilterDao(): AddressFilterDao
 
     companion object {
         private const val DB_NAME = "outage_db"
