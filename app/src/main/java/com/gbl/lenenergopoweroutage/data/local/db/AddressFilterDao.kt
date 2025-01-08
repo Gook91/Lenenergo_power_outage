@@ -10,11 +10,11 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface AddressFilterDao {
     @Upsert
-    suspend fun addAddress(address: String)
+    suspend fun addAddress(address: AddressFilterDBModel)
 
     @Delete
-    suspend fun deleteAddress(address: String)
+    suspend fun deleteAddress(address: AddressFilterDBModel)
 
     @Query("SELECT * FROM $ADDRESS_FILTER_TABLE_NAME")
-    fun getAllAddresses(): Flow<List<String>>
+    fun getAllAddresses(): Flow<List<AddressFilterDBModel>>
 }
