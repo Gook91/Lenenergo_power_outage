@@ -6,4 +6,7 @@
     <string name="expand_less">Показать меньше</string>
     <string name="address_separator">, </string>
     <string name="date_outage_template">С %1$s по %2$s</string>
+
+    <!--    Filter item    -->
+    <string name="delete_address">Удалить адрес из фильтра</string>
 </resources>
