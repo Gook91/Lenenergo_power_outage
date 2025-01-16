@@ -7,6 +7,10 @@
     <string name="address_separator">, </string>
     <string name="date_outage_template">С %1$s по %2$s</string>
 
+    <!--    Address header    -->
+    <string name="add_address_hint">Введите адрес или его часть</string>
+    <string name="add_address_button">Добавить адрес</string>
+
     <!--    Filter item    -->
     <string name="delete_address">Удалить адрес из фильтра</string>
 </resources>
