@@ -10,6 +10,7 @@ class HeaderAddressInFilterHolder(
     fun onBind(onClickAdd: (String) -> Unit) = with(binding) {
         addButton.setOnClickListener {
             onClickAdd(addAddressEditText.text.trim().toString())
+            addAddressEditText.text.clear()
         }
     }
 }
