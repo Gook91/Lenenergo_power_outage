@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.gbl.lenenergopoweroutage.domain.model.DataState
 import com.gbl.lenenergopoweroutage.domain.useCase.AddAddressFilterUseCase
+import com.gbl.lenenergopoweroutage.domain.useCase.DeleteAddressFilterUseCase
 import com.gbl.lenenergopoweroutage.domain.useCase.GetAddressFilterUseCase
 import com.gbl.lenenergopoweroutage.domain.useCase.GetOutagesUseCase
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -16,7 +17,7 @@ import kotlinx.coroutines.launch
 class ActivityViewModel(
     private val getOutagesUseCase: GetOutagesUseCase,
     private val addAddressFilterUseCase: AddAddressFilterUseCase,
-    private val deleteFilterUseCase: AddAddressFilterUseCase,
+    private val deleteFilterUseCase: DeleteAddressFilterUseCase,
     getAddressFilterUseCase: GetAddressFilterUseCase,
 ) : ViewModel() {
 
