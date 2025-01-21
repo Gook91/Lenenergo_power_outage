@@ -23,7 +23,7 @@ class ActivityViewModel(
 
     // Outages unit
 
-    private val refreshTrigger = MutableSharedFlow<Unit>()
+    private val refreshTrigger = MutableSharedFlow<Unit>(replay = 1)
 
     fun refresh() {
         viewModelScope.launch {
@@ -38,6 +38,10 @@ class ActivityViewModel(
             SharingStarted.WhileSubscribed(5_000L),
             DataState.Cached(emptyList())
         )
+
+    init {
+        refresh()
+    }
 
     // Address filter unit
 
