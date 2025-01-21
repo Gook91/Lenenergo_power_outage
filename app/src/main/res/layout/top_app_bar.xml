@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_settings"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/small_padding"
+        android:text="@string/app_name" />
+
+
+    <LinearLayout
+        android:id="@+id/expandable_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/address_filter_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_address_in_filter" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/expand_settings"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/icon_button_size"
+        android:button="@drawable/selector_expand"
+        android:checked="false"
+        tools:checked="true"
+        tools:ignore="VisualLintButtonSize" />
+</LinearLayout>

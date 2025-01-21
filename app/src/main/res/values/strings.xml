@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Lenenergo power outage</string>
+    <string name="app_name">Отключения Ленэнерго</string>
+
+    <string name="refresh">Обновить</string>
+    <string name="outages_not_found">Отключения не найдены</string>
+    <string name="loading_error">Ошибка загрузки</string>
 
     <!--    Outage item    -->
     <string name="expand_more">Показать больше</string>
