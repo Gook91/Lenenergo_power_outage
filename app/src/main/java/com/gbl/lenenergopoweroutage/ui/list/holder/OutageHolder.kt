@@ -21,6 +21,7 @@ class OutageHolder(
             itemView.context.getString(R.string.address_separator)
         )
         dates.text = getStringDate(outage.startDate, outage.endDate)
+        addresses.text = collapseAddresses
         commentary.text = outage.commentary
 
         expandButton.setOnCheckedChangeListener { _, isChecked ->

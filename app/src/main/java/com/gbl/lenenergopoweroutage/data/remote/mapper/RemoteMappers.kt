@@ -15,7 +15,7 @@ object RemoteMappers : JsoupDocumentMapper {
 
             iterator.next() // region
             iterator.next() // district
-            val addresses = iterator.next().text()
+            val addresses = iterator.next().wholeText().trim().replace("\n  ","\n")
             val startDate = iterator.next().text()
             val startTime = iterator.next().text()
             val endDate = iterator.next().text()
